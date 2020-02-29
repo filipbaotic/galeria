@@ -1,0 +1,173 @@
+body,
+html {
+    background: #FFF;
+    font-family: SF Pro Display;
+    font-size: 13px;
+    color: #333;
+    letter-spacing: -0.3px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition-duration: .2s;
+}
+
+body.dark,
+html.dark {
+    background: #111;
+    color: #CCC!important;
+    transition-duration: .2s;
+}
+
+body.dark a,
+body.dark a:hover {
+    transition-duration: .2s;
+    color: #CCC!important;
+}
+
+@font-face {
+    font-family: SF Pro Display;
+    font-weight: 400;
+    src: url(SF-Pro-Display-Light.otf);
+}
+
+@font-face {
+    font-family: SF Pro Display;
+    font-weight: 500;
+    src: url(SF-Pro-Display-Medium.otf);
+}
+
+@font-face {
+    font-family: SF Pro Display;
+    font-weight: 600;
+    src: url(SF-Pro-Display-Semibold.otf);
+}
+
+a,
+a:hover {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    transition-duration: .2s;
+}
+
+img {
+    max-width: 100%;
+}
+
+.left {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    width: 120px;
+    padding: 100px 20px 0 20px;
+    height: calc(100vh - 140px);
+    border-right: 1px solid #CCC;
+    text-transform: lowercase;
+}
+
+.title {
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 2px;
+}
+
+.sub {
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+a.link {
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 2px;
+}
+
+#content {
+    position: absolute;
+    top: 11px;
+    left: 171px;
+    width: 540px;
+    padding-bottom: 10px;
+    column-count: 2;
+    grid-column: auto;
+    column-gap: 0;
+    transition-duration: .2s;
+}
+
+.pic {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    transition-duration: .2s;
+}
+
+.toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 14px;
+    height: 8px;
+    padding: 2px;
+    background: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    transition-duration: .2s;
+}
+
+body.dark .toggle {
+    background: #222;
+    transition-duration: .2s;
+}
+
+.pin {
+    width: 8px;
+    height: 8px;
+    background: #CCC;
+    border-radius: 10px;
+    transition-duration: .2s;
+}
+
+body.dark .pin {
+    margin-left: 6px;
+    transition-duration: .2s;
+}
+
+@media (max-width:721px) {
+    #content {
+        width: 270px;
+        column-count: 1;
+    }
+}
+
+@media (max-width:451px) {
+    .left {
+        position: relative;
+        top: 0px;
+        left: 40px;
+        width: calc(100% - 80px);
+        padding: 80px 0 28px 0;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid #CCC;
+        text-transform: lowercase;
+    }
+    #content {
+        position: relative;
+        top: 40px;
+        left: 40px;
+        width: calc(100% - 80px);
+        margin: 0;
+        padding: 0;
+    }
+    .pic {
+        width: 100%;
+        padding-bottom: 40px;
+        margin: 0;
+    }
+    .toggle {
+        position: relative;
+        top: 14px;
+        left: 0;
+    }
+}
